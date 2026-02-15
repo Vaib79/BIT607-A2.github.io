@@ -1,0 +1,263 @@
+/* BIT607_A2 – Vaibhav Tyagi_5118765_booking.html*/
+
+/* Purpose: Remove any default spacing from all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Purpose: Makes width and padding uniform */
+}
+
+/* Purpose: Default font and text spacing for page */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ================= Header part ================= */
+
+/* Purpose: Header background and spacing */
+header {
+  background: #d8c9f7;
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+/* Purpose: Add space below main heading */
+header h1 {
+  margin-bottom: 0.5rem;
+}
+
+/* ================= Navigation menu ================= */
+
+/* Purpose: Navigation list layout */
+nav ul {
+  list-style: none; /* Purpose: Remove bullet points from nav buttons*/
+  display: flex; /* Purpose: Put links in one row */
+  justify-content: center; /* Purpose: Align links in the centre */
+  gap: 2rem; /* Purpose: Add uniform space between links */
+}
+
+/* Purpose: Navigation link styling */
+nav a {
+  color: #040404;
+  font-weight: bold;
+  text-decoration: none; /* Purpose: Remove underline */
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* Purpose: Navigation hover effect */
+nav a:hover {
+  background-color: #150198;
+  color: #f6f6f7;
+}
+
+/* ================= Main content ================= */
+
+/* Purpose: Main container */
+main {
+  max-width: 1100px;
+  margin: auto; /* Purpose: Center aligning content */
+  padding: 2rem;
+}
+
+/* Purpose: Logo layout */
+.logo {
+  width: 30%;
+  height: auto;
+  display: flex; /* Purpose: Align logo and text */
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* Purpose: Logo image size */
+.header-logo {
+  height: 40px;
+  width: auto;
+}
+
+/* Purpose: Main heading styling */
+.welcome-text {
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #030303;
+}
+
+/* Purpose: Hero image on banner */
+.banner {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+
+/* ================= All buttons ================= */
+
+/* Purpose: Banner buttons container */
+.banner-buttons {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: space-between;
+  max-width: 400px;
+  margin: 2rem auto 0;
+}
+
+/* Purpose: Styling for banner booking, services, form submit buttons */
+.bookbtn,
+.viewbtn, 
+.booking-form button, 
+.contact-form button {
+  font-size: 1.5rem;
+  padding: 10px 20px;
+  background-color: #d8c9f7;
+  color: #090909;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+
+/* Purpose: All buttons hover effect */
+button:hover {
+  background-color: #150198;
+  color: #f6f6f7;
+}
+
+/* ================= Forms ================= */
+
+/* Purpose: Form layout */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+/* Purpose: Input, textarea and button padding/font size */
+input,
+textarea,
+button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Purpose: Form container box styling */
+.contact-form,
+.booking-form,
+.contact-info {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1.5rem;
+  background-color: #f9f9f9;
+}
+
+/* ================= Tables ================= */
+
+/* Purpose: Table layout */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+/* Purpose: Table cells layout */
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+}
+
+/* Purpose: Table header background */
+th {
+  background: #f4f4f4;
+}
+
+/* ================= Gallery ================= */
+
+/* Purpose: Gallery grid layout 4x4 */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  max-width: 1000px;
+  margin: 2rem auto;
+  gap: 12px;
+}
+
+/* Purpose: Gallery heading */
+.gallery-grid h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* Purpose: Gallery images alignment */
+.gallery-grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* ================= Contact / booking page ================= */
+
+/* Purpose: Contact and booking page layout */
+.contact-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Purpose: Page heading inside contact container */
+.contact-container h2 {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+/* Purpose: Google map size */
+.map {
+  width: 100%;
+  height: 300px;
+}
+
+/* ================= Footer ================= */
+
+/* Purpose: Footer styling */
+footer {
+  background: #d8c9f7;
+  color: #070707;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* ================= Responsive design ================= */
+
+
+@media (max-width: 768px) {
+  /* Purpose: Align navigation links vertically */
+  nav ul {
+    flex-direction: column;
+  }
+
+  /* Purpose: Make gallery 2 images per row */
+  .gallery-grid img {
+    width: calc(50% - 1rem);
+  }
+
+  /* Purpose: Make contact section single column */
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Purpose: Make gallery images full width */
+  .gallery-grid img {
+    height: 180px;
+  }
+}
